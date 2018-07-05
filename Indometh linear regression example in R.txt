@@ -1,0 +1,30 @@
+
+> x = Indometh$time
+> y = Indometh$conc
+> res = lm(y ~ x)
+> summary(res)
+
+Call:
+lm(formula = y ~ x)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.5902 -0.2787 -0.1014  0.1579  1.6474 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1.11820    0.08542  13.090  < 2e-16 ***
+x           -0.18237    0.02258  -8.077 2.36e-11 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4486 on 64 degrees of freedom
+Multiple R-squared:  0.5048,	Adjusted R-squared:  0.497 
+F-statistic: 65.23 on 1 and 64 DF,  p-value: 2.361e-11
+
+> plot(x,y)
+> abline(lm(y~x))
+> abline(lm(x~y))
+> abline(lm(2*x~y))
+> abline(lm(2*x~y))
+> abline(lm(0.5*x~y))
